@@ -70,28 +70,135 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Main Hero Logo with Glow Effect */}
+          {/* Main Hero Logo with Enhanced Integration */}
           <motion.div 
             className="flex justify-center mb-12 relative"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
+            initial={{ opacity: 0, scale: 0.5, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
           >
             <div className="relative">
-              {/* Glow effect behind logo */}
+              {/* Multi-layered glow effects for depth */}
               <motion.div
                 animate={{ 
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.6, 0.3]
+                  scale: [1, 1.3, 1],
+                  opacity: [0.15, 0.4, 0.15],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ 
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -inset-8 bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400 rounded-full blur-3xl opacity-20"
+              />
+              
+              <motion.div
+                animate={{ 
+                  scale: [1.1, 1, 1.1],
+                  opacity: [0.2, 0.5, 0.2],
+                  rotate: [360, 0]
+                }}
+                transition={{ 
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+                className="absolute -inset-4 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan rounded-full blur-2xl opacity-30"
+              />
+              
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.15, 1],
+                  opacity: [0.3, 0.7, 0.3]
                 }}
                 transition={{ 
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
+                  delay: 0.5
                 }}
-                className="absolute inset-0 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan rounded-full blur-2xl"
+                className="absolute -inset-2 bg-gradient-to-br from-yellow-400/20 via-orange-500/20 to-red-500/20 rounded-full blur-xl"
               />
-              <Logo size="hero" animated />
+
+              {/* Logo container with glass morphism */}
+              <motion.div
+                whileHover={{ 
+                  scale: 1.08,
+                  rotate: [0, 5, -5, 0],
+                  transition: { duration: 0.6, ease: "easeOut" }
+                }}
+                className="relative p-6 bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl shadow-2xl overflow-hidden"
+              >
+                {/* Glass reflection effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-3xl"></div>
+                <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/5 to-transparent rounded-t-3xl"></div>
+                
+                {/* Logo with enhanced positioning */}
+                <div className="relative z-10">
+                  <Logo size="hero" animated glowEffect />
+                </div>
+                
+                {/* Orbiting particles */}
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg"
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                    }}
+                    animate={{
+                      rotate: 360,
+                      scale: [0.5, 1, 0.5],
+                      opacity: [0.3, 0.9, 0.3],
+                    }}
+                    transition={{
+                      rotate: {
+                        duration: 6 + (i * 0.5),
+                        repeat: Infinity,
+                        ease: "linear",
+                      },
+                      scale: {
+                        duration: 2 + (i * 0.3),
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                      opacity: {
+                        duration: 2 + (i * 0.3),
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                    }}
+                    transformOrigin={`${40 + (i * 10)}px 0px`}
+                  />
+                ))}
+                
+                {/* Floating sparkles */}
+                {[...Array(12)].map((_, i) => (
+                  <motion.div
+                    key={`sparkle-${i}`}
+                    className="absolute w-1 h-1 bg-white/60 rounded-full"
+                    style={{
+                      top: `${15 + (i * 8)}%`,
+                      left: `${10 + (i * 7)}%`,
+                    }}
+                    animate={{
+                      y: [0, -15, 0],
+                      x: [0, Math.sin(i) * 10, 0],
+                      opacity: [0, 1, 0],
+                      scale: [0, 1.5, 0],
+                    }}
+                    transition={{
+                      duration: 3 + (i * 0.2),
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: i * 0.3,
+                    }}
+                  />
+                ))}
+              </motion.div>
             </div>
           </motion.div>
           

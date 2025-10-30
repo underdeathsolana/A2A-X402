@@ -14,7 +14,8 @@ import {
   ArrowRight,
   Cpu,
   Database,
-  Globe
+  Globe,
+  Copy
 } from 'lucide-react'
 import Footer from './components/Footer'
 import Logo from './components/Logo'
@@ -150,58 +151,86 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="mx-auto max-w-6xl px-2 sm:px-4 mb-6 sm:mb-8"
+        className="mx-auto max-w-7xl px-4 sm:px-6 mb-8"
       >
-        <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg shadow-2xl overflow-hidden">
-          <div className="bg-gray-800 px-3 sm:px-4 py-2 flex items-center justify-between border-b border-gray-700">
-            <div className="flex items-center space-x-2">
-              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
-              <span className="text-xs sm:text-sm text-white font-medium hidden sm:inline">SOON Contract Live Terminal</span>
-              <span className="text-xs text-white font-medium sm:hidden">SOON Live</span>
-            </div>
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="flex items-center space-x-1 sm:space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-xs text-green-400">Live</span>
+        <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-600/50 rounded-2xl shadow-2xl overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-cyan-500/5"></div>
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-yellow-400/10 to-transparent rounded-full blur-xl"></div>
+          <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-green-400/10 to-transparent rounded-full blur-xl"></div>
+          
+          {/* Header */}
+          <div className="relative bg-gradient-to-r from-gray-800/90 to-gray-700/90 px-4 sm:px-6 py-3 border-b border-gray-600/50">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg shadow-lg">
+                  <Zap className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-sm sm:text-base text-white font-bold">SOON Contract</h3>
+                  <p className="text-xs text-gray-300">Live Terminal</p>
+                </div>
               </div>
-              <a
-                href="https://pump.fun/SOON1234567890abcdef"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white text-xs px-2 sm:px-3 py-1 rounded-md font-semibold transition-colors flex items-center space-x-1"
-              >
-                <span className="hidden sm:inline">Buy SOON</span>
-                <span className="sm:hidden">Buy</span>
-                <ArrowRight className="w-3 h-3" />
-              </a>
+              <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 bg-green-500/20 px-3 py-1.5 rounded-full border border-green-500/30">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
+                  <span className="text-xs font-medium text-green-300">LIVE</span>
+                </div>
+                <motion.a
+                  href="https://pump.fun/SOON1234567890abcdef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-xs sm:text-sm px-4 py-2 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center space-x-2"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span>Buy SOON</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                </motion.a>
+              </div>
             </div>
           </div>
           
-          <div className="p-2 sm:p-3 bg-black/50 font-mono text-xs overflow-x-auto">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0 sm:space-x-6 min-w-max sm:min-w-0">
-              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-                <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-gray-400">Contract:</span>
-                  <code className="bg-gray-800 px-1 sm:px-2 py-1 rounded text-green-400 text-xs">SOON123...bcdef</code>
-                </div>
-                <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-gray-400">Price:</span>
-                  <span className="text-green-400">$0.0024</span>
+          {/* Content */}
+          <div className="relative p-4 sm:p-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+                <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
+                  <div className="text-xs text-gray-400 mb-1 font-medium">Contract Address</div>
+                  <div className="flex items-center space-x-2">
+                    <code className="text-sm font-mono text-green-400 bg-gray-900/50 px-2 py-1 rounded-lg">
+                      SOON123...bcdef
+                    </code>
+                    <motion.button
+                      onClick={() => navigator.clipboard.writeText('SOON1234567890abcdef')}
+                      className="p-1 text-gray-400 hover:text-white transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <Copy className="w-3 h-3" />
+                    </motion.button>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
-                <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-gray-400">MCap:</span>
-                  <span className="text-blue-400">$1.2M</span>
-                </div>
-                <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-gray-400">Holders:</span>
-                  <span className="text-cyan-400">1,247</span>
-                </div>
-                <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-gray-400">24h:</span>
-                  <span className="text-green-400">+12.5%</span>
-                </div>
+              
+              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
+                <div className="text-xs text-gray-400 mb-1 font-medium">Price</div>
+                <div className="text-lg font-bold text-green-400">$0.0024</div>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
+                <div className="text-xs text-gray-400 mb-1 font-medium">Market Cap</div>
+                <div className="text-lg font-bold text-blue-400">$1.2M</div>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
+                <div className="text-xs text-gray-400 mb-1 font-medium">Holders</div>
+                <div className="text-lg font-bold text-cyan-400">1,247</div>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
+                <div className="text-xs text-gray-400 mb-1 font-medium">24h Change</div>
+                <div className="text-lg font-bold text-green-400">+12.5%</div>
               </div>
             </div>
           </div>
