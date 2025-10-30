@@ -28,16 +28,16 @@ export default function Footer() {
       { name: 'Terminal Demo', href: '#demo' }
     ],
     technology: [
-      { name: 'Solana Blockchain', href: '#tech' },
-      { name: 'AI Agent Protocol', href: '#tech' },
-      { name: 'Payment Processing', href: '#tech' },
-      { name: 'Security Features', href: '#tech' }
+      { name: 'Solana Blockchain', href: '#features' },
+      { name: 'AI Agent Protocol', href: '#features' },
+      { name: 'Payment Processing', href: '#demo' },
+      { name: 'Security Features', href: '#features' }
     ],
     resources: [
-      { name: 'Whitepaper', href: '#resources' },
+      { name: 'Whitepaper', href: '#features' },
       { name: 'Use Cases', href: '#features' },
       { name: 'Token Economics', href: '#pricing' },
-      { name: 'Roadmap', href: '#roadmap' }
+      { name: 'Roadmap', href: '/roadmap' }
     ]
   }
 
@@ -63,6 +63,22 @@ export default function Footer() {
       name: 'Features'
     }
   ]
+
+  const handleLinkClick = (href) => {
+    if (href.startsWith('#')) {
+      // Handle scroll to section
+      const element = document.getElementById(href.substring(1))
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else if (href.startsWith('/')) {
+      // Handle navigation to page
+      window.location.href = href
+    } else if (href.startsWith('http') || href.startsWith('mailto:')) {
+      // Handle external links
+      window.open(href, '_blank', 'noopener,noreferrer')
+    }
+  }
 
   return (
     <footer className="relative px-6 py-20 border-t border-white/10">
@@ -143,13 +159,13 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-white/70 hover:text-accent-400 transition-colors duration-300 flex items-center group"
+                  <button 
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-white/70 hover:text-accent-400 transition-colors duration-300 flex items-center group cursor-pointer"
                   >
                     {link.name}
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -166,13 +182,13 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerLinks.developers.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-white/70 hover:text-primary-400 transition-colors duration-300 flex items-center group"
+                  <button 
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-white/70 hover:text-primary-400 transition-colors duration-300 flex items-center group cursor-pointer"
                   >
                     {link.name}
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -189,13 +205,13 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerLinks.technology.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-white/70 hover:text-green-400 transition-colors duration-300 flex items-center group"
+                  <button 
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-white/70 hover:text-green-400 transition-colors duration-300 flex items-center group cursor-pointer"
                   >
                     {link.name}
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -212,13 +228,13 @@ export default function Footer() {
             <ul className="space-y-4">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
-                    className="text-white/70 hover:text-accent-400 transition-colors duration-300 flex items-center group"
+                  <button 
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-white/70 hover:text-accent-400 transition-colors duration-300 flex items-center group cursor-pointer"
                   >
                     {link.name}
                     <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -235,7 +251,7 @@ export default function Footer() {
         >
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-              Stay Updated with X402
+              Stay Updated with A2A X402
             </h3>
             <p className="text-white/70 mb-6 text-sm md:text-base">
               Get the latest updates on new features, partnerships, and the future of AI agent payments.
