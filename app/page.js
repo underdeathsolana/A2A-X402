@@ -177,7 +177,7 @@ export default function Home() {
                   <span className="text-xs font-medium text-green-300">LIVE</span>
                 </div>
                 <motion.a
-                  href="https://pump.fun/SOON1234567890abcdef"
+                  href="https://pump.fun/coin/EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-xs sm:text-sm px-4 py-2 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center space-x-2"
