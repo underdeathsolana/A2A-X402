@@ -22,6 +22,7 @@ import Logo from './components/Logo'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import TerminalSimulation from './components/TerminalSimulation'
+import LiveTokenData from './components/LiveTokenData'
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -146,96 +147,8 @@ export default function Home() {
       {/* Main Content with proper spacing for fixed navbar */}
       <div className="pt-24 relative z-10" id="home">
 
-      {/* SOON Contract Terminal */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mx-auto max-w-7xl px-4 sm:px-6 mb-8"
-      >
-        <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-600/50 rounded-2xl shadow-2xl overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-blue-500/5 to-cyan-500/5"></div>
-          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-yellow-400/10 to-transparent rounded-full blur-xl"></div>
-          <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-green-400/10 to-transparent rounded-full blur-xl"></div>
-          
-          {/* Header */}
-          <div className="relative bg-gradient-to-r from-gray-800/90 to-gray-700/90 px-4 sm:px-6 py-3 border-b border-gray-600/50">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg shadow-lg">
-                  <Zap className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-sm sm:text-base text-white font-bold">A2A X402 TOKEN</h3>
-                  <p className="text-xs text-gray-300">Live Terminal</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-2 bg-green-500/20 px-3 py-1.5 rounded-full border border-green-500/30">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
-                  <span className="text-xs font-medium text-green-300">LIVE</span>
-                </div>
-                <motion.a
-                  href="https://pump.fun/coin/EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-xs sm:text-sm px-4 py-2 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center space-x-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span>BUY</span>
-                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                </motion.a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Content */}
-          <div className="relative p-4 sm:p-6">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              <div className="col-span-2 sm:col-span-1 lg:col-span-2">
-                <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
-                  <div className="text-xs text-gray-400 mb-1 font-medium">Contract Address</div>
-                  <div className="flex items-center space-x-2">
-                    <code className="text-sm font-mono text-green-400 bg-gray-900/50 px-2 py-1 rounded-lg">
-                      EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump
-                    </code>
-                    <motion.button
-                      onClick={() => navigator.clipboard.writeText('EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump')}
-                      className="p-1 text-gray-400 hover:text-white transition-colors"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Copy className="w-3 h-3" />
-                    </motion.button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
-                <div className="text-xs text-gray-400 mb-1 font-medium">Price</div>
-                <div className="text-lg font-bold text-green-400">$0.0024</div>
-              </div>
-              
-              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
-                <div className="text-xs text-gray-400 mb-1 font-medium">Market Cap</div>
-                <div className="text-lg font-bold text-blue-400">$1.2M</div>
-              </div>
-              
-              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
-                <div className="text-xs text-gray-400 mb-1 font-medium">Holders</div>
-                <div className="text-lg font-bold text-cyan-400">1,247</div>
-              </div>
-              
-              <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50">
-                <div className="text-xs text-gray-400 mb-1 font-medium">24h Change</div>
-                <div className="text-lg font-bold text-green-400">+12.5%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      {/* Live Token Data */}
+      <LiveTokenData />
 
       {/* Hero Section */}
       <HeroSection />
