@@ -202,7 +202,7 @@ export default function Home() {
                       SOON123...bcdef
                     </code>
                     <motion.button
-                      onClick={() => navigator.clipboard.writeText('SOON1234567890abcdef')}
+                      onClick={() => navigator.clipboard.writeText('')}
                       className="p-1 text-gray-400 hover:text-white transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
