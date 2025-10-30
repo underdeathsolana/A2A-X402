@@ -42,14 +42,14 @@ export default function Footer() {
 
   const socialLinks = [
     { 
-      icon: <MessageCircle className="w-5 h-5" />, 
-      href: '#contact',
-      name: 'Community'
+      icon: <Twitter className="w-5 h-5" />, 
+      href: 'https://x.com/A2AX402XYZ',
+      name: 'Twitter'
     },
     { 
       icon: <Mail className="w-5 h-5" />, 
-      href: '#contact',
-      name: 'Contact'
+      href: 'mailto:a2ax402xyz@gmail.com',
+      name: 'Email'
     },
     { 
       icon: <ExternalLink className="w-5 h-5" />, 
