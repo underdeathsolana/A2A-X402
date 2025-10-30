@@ -224,56 +224,11 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Sponsors Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h3 className="text-xl font-bold text-white mb-8">Powered By</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {/* Solana */}
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center space-y-2 group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-green-400 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">SOL</span>
-              </div>
-              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Solana</span>
-            </motion.div>
-
-            {/* Coinbase */}
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center space-y-2 group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">CB</span>
-              </div>
-              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Coinbase</span>
-            </motion.div>
-
-            {/* Privy */}
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center space-y-2 group"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">P</span>
-              </div>
-              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Privy</span>
-            </motion.div>
-          </div>
-        </motion.div>
-
         {/* Newsletter Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
           className="glass-effect p-6 md:p-8 rounded-2xl mb-16"
         >
@@ -301,7 +256,7 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
           className="border-t border-white/10 pt-6 md:pt-8"
         >
