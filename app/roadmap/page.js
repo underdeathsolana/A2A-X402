@@ -18,221 +18,221 @@ export default function RoadmapPage() {
   const roadmapPhases = [
     {
       id: 0,
-      title: "Foundation & Core Protocol",
-      subtitle: "Q4 2024 - Q1 2025",
+      title: "Platform Optimization & Scale",
+      subtitle: "Q4 2025",
       status: "in-progress",
-      progress: 75,
-      description: "Building the fundamental infrastructure for A2A payments",
+      progress: 80,
+      description: "Optimizing platform performance and scaling infrastructure for mass adoption",
       color: "from-brand-purple to-brand-blue",
-      icon: <Code className="w-6 h-6" />,
+      icon: <Rocket className="w-6 h-6" />,
       milestones: [
         {
-          title: "Smart Contract Development",
-          description: "Core A2A payment smart contracts on Solana",
+          title: "Performance Optimization",
+          description: "Optimize smart contracts and reduce gas fees by 50%",
           status: "completed",
-          date: "Dec 2024",
+          date: "Oct 2025",
           team: "Blockchain Team",
           priority: "high"
         },
         {
-          title: "Payment Protocol Design",
-          description: "X402 payment flow and agent communication protocol",
-          status: "completed",
-          date: "Jan 2025",
+          title: "Multi-Chain Integration",
+          description: "Extend A2A protocol to Ethereum and Polygon networks",
+          status: "in-progress",
+          date: "Nov 2025",
           team: "Protocol Team",
           priority: "high"
         },
         {
-          title: "SDK Development", 
-          description: "JavaScript/TypeScript SDK for developers",
+          title: "Advanced Analytics Dashboard", 
+          description: "Real-time analytics and monitoring for AI agents",
           status: "in-progress",
-          date: "Feb 2025",
-          team: "DevTools Team",
-          priority: "high"
+          date: "Dec 2025",
+          team: "Data Team",
+          priority: "medium"
         },
         {
-          title: "Security Audit",
-          description: "Third-party security audit of smart contracts",
+          title: "Enterprise SDK v2.0",
+          description: "Enhanced SDK with enterprise-grade features",
           status: "pending",
-          date: "Mar 2025",
-          team: "Security Team",
-          priority: "critical"
+          date: "Dec 2025",
+          team: "DevTools Team",
+          priority: "high"
         }
       ]
     },
     {
       id: 1,
-      title: "Developer Tools & Platform",
-      subtitle: "Q1 2025 - Q2 2025",
+      title: "AI Integration & Intelligence",
+      subtitle: "Q1 2026",
       status: "pending",
-      progress: 25,
-      description: "Creating tools and infrastructure for developers",
+      progress: 15,
+      description: "Advanced AI integration and autonomous agent intelligence",
       color: "from-brand-blue to-brand-cyan",
-      icon: <Layers className="w-6 h-6" />,
+      icon: <Bot className="w-6 h-6" />,
       milestones: [
         {
-          title: "A2A IDE Enhancement",
-          description: "Advanced IDE with debugging and testing tools",
-          status: "in-progress",
-          date: "Feb 2025",
-          team: "DevTools Team",
+          title: "AI Agent Marketplace",
+          description: "Decentralized marketplace for AI agents and services",
+          status: "pending",
+          date: "Jan 2026",
+          team: "AI Team",
           priority: "high"
         },
         {
-          title: "CLI Tools",
-          description: "Command-line interface for A2A development",
+          title: "Natural Language Processing",
+          description: "Advanced NLP for agent communication and contracts",
           status: "pending",
-          date: "Mar 2025",
-          team: "DevTools Team",
-          priority: "medium"
-        },
-        {
-          title: "Documentation Portal",
-          description: "Comprehensive developer documentation",
-          status: "pending",
-          date: "Apr 2025",
-          team: "DevRel Team",
+          date: "Feb 2026",
+          team: "AI Team",
           priority: "high"
         },
         {
-          title: "Testing Framework",
-          description: "Automated testing tools for A2A applications",
+          title: "Machine Learning Integration",
+          description: "ML-powered fraud detection and risk assessment",
           status: "pending",
-          date: "May 2025",
-          team: "QA Team",
+          date: "Mar 2026",
+          team: "AI Team",
           priority: "medium"
+        },
+        {
+          title: "Autonomous Governance",
+          description: "AI-driven protocol governance and decision making",
+          status: "pending",
+          date: "Mar 2026",
+          team: "Governance Team",
+          priority: "high"
         }
       ]
     },
     {
       id: 2,
-      title: "AI Agent Integration", 
-      subtitle: "Q2 2025 - Q3 2025",
+      title: "Global Expansion & Partnerships", 
+      subtitle: "Q2 2026",
       status: "pending",
-      progress: 0,
-      description: "Native support for AI agents and autonomous payments",
+      progress: 5,
+      description: "Global market expansion and strategic enterprise partnerships",
       color: "from-brand-cyan to-brand-teal",
-      icon: <Bot className="w-6 h-6" />,
+      icon: <Globe className="w-6 h-6" />,
       milestones: [
         {
-          title: "Agent Authentication",
-          description: "Secure identity and authentication for AI agents",
+          title: "Enterprise Partnerships",
+          description: "Strategic partnerships with Fortune 500 companies",
           status: "pending",
-          date: "Jun 2025",
-          team: "AI Team",
+          date: "Apr 2026",
+          team: "Business Dev",
           priority: "high"
         },
         {
-          title: "Intent Recognition",
-          description: "Natural language processing for payment intents",
+          title: "Regulatory Compliance",
+          description: "Full compliance with global financial regulations",
           status: "pending",
-          date: "Jul 2025",
-          team: "AI Team",
-          priority: "high"
-        },
-        {
-          title: "Autonomous Payments",
-          description: "Fully automated agent-to-agent transactions",
-          status: "pending",
-          date: "Aug 2025",
-          team: "Protocol Team",
+          date: "May 2026",
+          team: "Legal Team",
           priority: "critical"
         },
         {
-          title: "Agent Marketplace",
-          description: "Discovery and integration platform for AI agents",
+          title: "Cross-Border Payments",
+          description: "Seamless international A2A payment solutions",
           status: "pending",
-          date: "Sep 2025",
-          team: "Platform Team",
+          date: "Jun 2026",
+          team: "Protocol Team",
+          priority: "high"
+        },
+        {
+          title: "Banking Integration",
+          description: "Integration with traditional banking systems",
+          status: "pending",
+          date: "Jun 2026",
+          team: "Integration Team",
           priority: "medium"
         }
       ]
     },
     {
       id: 3,
-      title: "Scaling & Optimization",
-      subtitle: "Q3 2025 - Q4 2025", 
+      title: "Advanced Features & Innovation",
+      subtitle: "Q3 2026", 
       status: "pending",
       progress: 0,
-      description: "Performance optimization and network scaling",
-      color: "from-brand-teal to-brand-emerald",
-      icon: <Network className="w-6 h-6" />,
+      description: "Cutting-edge features and next-generation innovations",
+      color: "from-brand-teal to-brand-purple",
+      icon: <Zap className="w-6 h-6" />,
       milestones: [
         {
-          title: "Layer 2 Integration",
-          description: "Support for Solana Layer 2 solutions",
+          title: "Quantum-Resistant Security",
+          description: "Implementation of quantum-resistant cryptography",
           status: "pending",
-          date: "Oct 2025",
-          team: "Blockchain Team",
+          date: "Jul 2026",
+          team: "Security Team",
           priority: "high"
         },
         {
-          title: "Cross-Chain Support",
-          description: "Multi-blockchain payment compatibility",
+          title: "Decentralized Governance",
+          description: "Community-driven protocol governance system",
           status: "pending",
-          date: "Nov 2025",
-          team: "Protocol Team",
+          date: "Aug 2026",
+          team: "Governance Team",
+          priority: "high"
+        },
+        {
+          title: "Advanced Privacy Features",
+          description: "Zero-knowledge proofs for private transactions",
+          status: "pending",
+          date: "Sep 2026",
+          team: "Privacy Team",
           priority: "medium"
         },
         {
-          title: "Performance Optimization",
-          description: "Sub-second payment processing",
+          title: "Carbon-Neutral Protocol",
+          description: "Environmental sustainability initiatives",
           status: "pending",
-          date: "Dec 2025",
-          team: "Core Team",
-          priority: "high"
-        },
-        {
-          title: "Enterprise Features",
-          description: "Advanced features for enterprise adoption",
-          status: "pending",
-          date: "Dec 2025",
-          team: "Enterprise Team",
+          date: "Sep 2026",
+          team: "Sustainability Team",
           priority: "medium"
         }
       ]
     },
     {
       id: 4,
-      title: "Ecosystem & Adoption",
-      subtitle: "Q1 2026 onwards",
+      title: "Future Vision & Beyond",
+      subtitle: "Q4 2026",
       status: "future",
       progress: 0,
-      description: "Building ecosystem partnerships and mainstream adoption",
+      description: "Setting foundation for the future of autonomous digital economy",
       color: "from-brand-emerald to-brand-purple",
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Target className="w-6 h-6" />,
       milestones: [
         {
-          title: "Partner Integrations",
-          description: "Integration with major AI platforms",
+          title: "Metaverse Integration",
+          description: "Native A2A payments in virtual worlds and metaverse",
           status: "future",
-          date: "Q1 2026",
-          team: "Partnerships Team",
+          date: "Oct 2026",
+          team: "Web3 Team",
           priority: "high"
         },
         {
-          title: "Mobile SDK",
-          description: "Native mobile app development support",
+          title: "IoT Device Support",
+          description: "Payment protocol for Internet of Things devices",
           status: "future", 
-          date: "Q2 2026",
-          team: "Mobile Team",
+          date: "Nov 2026",
+          team: "IoT Team",
           priority: "medium"
         },
         {
-          title: "Governance Token",
-          description: "Community governance and tokenomics",
+          title: "Global Reserve Currency",
+          description: "A2A X402 as standard for digital agent economy",
           status: "future",
-          date: "Q3 2026",
-          team: "Tokenomics Team",
-          priority: "low"
+          date: "Dec 2026",
+          team: "Economics Team",
+          priority: "critical"
         },
         {
-          title: "Global Rollout",
-          description: "Worldwide availability and compliance",
+          title: "Next-Gen Protocol",
+          description: "Research and development for A2A X403",
           status: "future",
-          date: "Q4 2026",
-          team: "Compliance Team",
-          priority: "medium"
+          date: "Dec 2026",
+          team: "Research Team",
+          priority: "high"
         }
       ]
     }

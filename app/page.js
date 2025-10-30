@@ -150,16 +150,17 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="mx-auto max-w-6xl px-4 mb-8"
+        className="mx-auto max-w-6xl px-2 sm:px-4 mb-6 sm:mb-8"
       >
         <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-lg shadow-2xl overflow-hidden">
-          <div className="bg-gray-800 px-4 py-2 flex items-center justify-between border-b border-gray-700">
+          <div className="bg-gray-800 px-3 sm:px-4 py-2 flex items-center justify-between border-b border-gray-700">
             <div className="flex items-center space-x-2">
-              <Zap className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm text-white font-medium">SOON Contract Live Terminal</span>
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
+              <span className="text-xs sm:text-sm text-white font-medium hidden sm:inline">SOON Contract Live Terminal</span>
+              <span className="text-xs text-white font-medium sm:hidden">SOON Live</span>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="flex items-center space-x-1 sm:space-x-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-xs text-green-400">Live</span>
               </div>
@@ -167,36 +168,37 @@ export default function Home() {
                 href="https://pump.fun/SOON1234567890abcdef"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 rounded-md font-semibold transition-colors flex items-center space-x-1"
+                className="bg-green-600 hover:bg-green-700 text-white text-xs px-2 sm:px-3 py-1 rounded-md font-semibold transition-colors flex items-center space-x-1"
               >
-                <span>Buy SOON</span>
+                <span className="hidden sm:inline">Buy SOON</span>
+                <span className="sm:hidden">Buy</span>
                 <ArrowRight className="w-3 h-3" />
               </a>
             </div>
           </div>
           
-          <div className="p-3 bg-black/50 font-mono text-xs">
-            <div className="flex items-center justify-between text-white space-x-6">
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
+          <div className="p-2 sm:p-3 bg-black/50 font-mono text-xs overflow-x-auto">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0 sm:space-x-6 min-w-max sm:min-w-0">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <span className="text-gray-400">Contract:</span>
-                  <code className="bg-gray-800 px-2 py-1 rounded text-green-400">SOON1234567890abcdef</code>
+                  <code className="bg-gray-800 px-1 sm:px-2 py-1 rounded text-green-400 text-xs">SOON123...bcdef</code>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <span className="text-gray-400">Price:</span>
                   <span className="text-green-400">$0.0024</span>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <span className="text-gray-400">Market Cap:</span>
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <span className="text-gray-400">MCap:</span>
                   <span className="text-blue-400">$1.2M</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <span className="text-gray-400">Holders:</span>
                   <span className="text-cyan-400">1,247</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1 sm:space-x-2">
                   <span className="text-gray-400">24h:</span>
                   <span className="text-green-400">+12.5%</span>
                 </div>

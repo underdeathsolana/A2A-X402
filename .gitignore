@@ -49,6 +49,6 @@ yarn-error.log*
 # Typescript
 *.tsbuildinfo
 next-env.d.ts
-.md
-.env.example
+*.md
+*.env.example
 node_modules

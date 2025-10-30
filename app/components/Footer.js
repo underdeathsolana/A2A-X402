@@ -224,28 +224,73 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Newsletter Section */}
+        {/* Sponsors Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="glass-effect p-8 rounded-2xl mb-16"
+          className="text-center mb-16"
+        >
+          <h3 className="text-xl font-bold text-white mb-8">Powered By</h3>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {/* Solana */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center space-y-2 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-green-400 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl">SOL</span>
+              </div>
+              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Solana</span>
+            </motion.div>
+
+            {/* Coinbase */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center space-y-2 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg">CB</span>
+              </div>
+              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Coinbase</span>
+            </motion.div>
+
+            {/* Privy */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex flex-col items-center space-y-2 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg">P</span>
+              </div>
+              <span className="text-white/70 text-sm group-hover:text-white transition-colors">Privy</span>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Newsletter Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="glass-effect p-6 md:p-8 rounded-2xl mb-16"
         >
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
               Stay Updated with X402
             </h3>
-            <p className="text-white/70 mb-6">
+            <p className="text-white/70 mb-6 text-sm md:text-base">
               Get the latest updates on new features, partnerships, and the future of AI agent payments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-accent-400 transition-colors"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-accent-400 transition-colors text-sm md:text-base"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-accent-500 to-primary-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+              <button className="px-6 py-3 bg-gradient-to-r from-accent-500 to-primary-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform text-sm md:text-base">
                 Subscribe
               </button>
             </div>
@@ -256,16 +301,16 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
           viewport={{ once: true }}
-          className="border-t border-white/10 pt-8"
+          className="border-t border-white/10 pt-6 md:pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <p className="text-white/60 text-sm">
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:items-center">
+            <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-6">
+              <p className="text-white/60 text-xs md:text-sm text-center md:text-left">
                 © 2025 A2A X402 Protocol. All rights reserved.
               </p>
-              <div className="flex items-center space-x-4 text-sm">
+              <div className="flex justify-center md:justify-start items-center space-x-4 text-xs md:text-sm">
                 <a href="/privacy" className="text-white/60 hover:text-white transition-colors">
                   Privacy Policy
                 </a>
@@ -275,7 +320,7 @@ export default function Footer() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-2 text-white/60 text-sm">
+            <div className="flex items-center justify-center md:justify-end space-x-2 text-white/60 text-xs md:text-sm">
               <span>Built with</span>
               <Heart className="w-4 h-4 text-red-400 animate-pulse" />
               <span>for the future of AI</span>
