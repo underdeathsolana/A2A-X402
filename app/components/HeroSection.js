@@ -314,7 +314,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.7 }}
             >
-              * Interactive terminal simulation - No real transactions
+              Interactive terminal simulation
             </motion.p>
           </motion.div>
 

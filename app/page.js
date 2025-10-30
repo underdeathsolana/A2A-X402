@@ -251,7 +251,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
-              Why Choose <span className="gradient-text">X402</span>?
+              Why Choose <span className="gradient-text">A2A X402</span>?
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Built specifically for the age of autonomous AI agents, 
@@ -316,7 +316,7 @@ export default function Home() {
               <span className="gradient-text">Use Cases</span> & Pricing
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              From data feeds to AI models, X402 powers the future of autonomous digital commerce.
+              From data feeds to AI models, A2A X402 powers the future of autonomous digital commerce.
             </p>
           </motion.div>
 
