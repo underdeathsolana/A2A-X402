@@ -184,7 +184,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span>Buy SOON</span>
+                  <span>BUY</span>
                   <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </motion.a>
               </div>
