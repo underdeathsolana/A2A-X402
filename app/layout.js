@@ -31,6 +31,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Phantom Wallet Detection
+              window.addEventListener('load', () => {
+                if (window.solana && window.solana.isPhantom) {
+                  console.log('Phantom wallet detected');
+                } else {
+                  console.log('Phantom wallet not detected');
+                }
+              });
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <BackgroundPattern />
         <div className="relative z-10">

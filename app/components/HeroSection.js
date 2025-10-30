@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Play, ArrowRight, CheckCircle, Loader2 } from 'lucide-react'
+import { Play, ArrowRight, CheckCircle, Loader2, Wallet } from 'lucide-react'
 import Logo from './Logo'
+import ConnectWallet from './ConnectWallet'
 
 export default function HeroSection() {
   return (
@@ -186,11 +187,25 @@ export default function HeroSection() {
               </button>
             </div>
             
+            {/* Wallet Connection Section */}
+            <motion.div 
+              className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5 }}
+            >
+              <div className="flex items-center space-x-2 text-white/80">
+                <Wallet className="w-5 h-5" />
+                <span className="font-medium">Connect your Solana wallet to get started</span>
+              </div>
+              <ConnectWallet className="text-sm px-6 py-3" />
+            </motion.div>
+            
             <motion.p 
               className="text-white/60 mt-6 text-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.6 }}
+              transition={{ delay: 1.7 }}
             >
               * Interactive terminal simulation - No real transactions
             </motion.p>

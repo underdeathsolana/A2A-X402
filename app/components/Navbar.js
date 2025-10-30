@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Zap, Bot, FileText, Terminal, Wallet, Code, Map } from 'lucide-react'
 import { useRouter, usePathname } from 'next/navigation'
 import Logo from './Logo'
+import ConnectWallet from './ConnectWallet'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -106,11 +107,12 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Button - Desktop */}
-            <div className="hidden md:block">
+            {/* Wallet & CTA Buttons - Desktop */}
+            <div className="hidden md:flex items-center space-x-3">
+              <ConnectWallet />
               <motion.button
                 onClick={() => router.push('/ide')}
-                className="px-5 py-2.5 bg-gradient-to-r from-brand-purple to-brand-cyan text-white rounded-xl font-bold hover:scale-105 transition-all duration-300 border border-white/20 text-sm"
+                className="px-4 py-2.5 bg-gradient-to-r from-brand-purple to-brand-cyan text-white rounded-xl font-bold hover:scale-105 transition-all duration-300 border border-white/20 text-sm"
                 whileHover={{ 
                   boxShadow: "0 0 30px rgba(139, 92, 246, 0.5)"
                 }}
@@ -163,17 +165,27 @@ export default function Navbar() {
                     </motion.button>
                   ))}
                   
-                  {/* Mobile CTA */}
-                  <motion.button
-                    onClick={() => router.push('/ide')}
-                    className="w-full mt-4 px-6 py-4 bg-gradient-to-r from-brand-purple to-brand-cyan text-white rounded-xl font-bold text-center border border-white/20"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: navItems.length * 0.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Launch A2A IDE
-                  </motion.button>
+                  {/* Mobile Wallet & CTA */}
+                  <div className="mt-4 space-y-3">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: navItems.length * 0.1 }}
+                    >
+                      <ConnectWallet className="w-full justify-center" />
+                    </motion.div>
+                    
+                    <motion.button
+                      onClick={() => router.push('/ide')}
+                      className="w-full px-6 py-4 bg-gradient-to-r from-brand-purple to-brand-cyan text-white rounded-xl font-bold text-center border border-white/20"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: (navItems.length + 1) * 0.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Launch A2A IDE
+                    </motion.button>
+                  </div>
                 </div>
               </div>
             </motion.div>
