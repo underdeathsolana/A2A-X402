@@ -167,7 +167,7 @@ export default function Home() {
                   <Zap className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base text-white font-bold">SOON Contract</h3>
+                  <h3 className="text-sm sm:text-base text-white font-bold">A2A X402 TOKEN</h3>
                   <p className="text-xs text-gray-300">Live Terminal</p>
                 </div>
               </div>
