@@ -199,7 +199,7 @@ export default function Home() {
                   <div className="text-xs text-gray-400 mb-1 font-medium">Contract Address</div>
                   <div className="flex items-center space-x-2">
                     <code className="text-sm font-mono text-green-400 bg-gray-900/50 px-2 py-1 rounded-lg">
-                      SOON123...bcdef
+                      EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump
                     </code>
                     <motion.button
                       onClick={() => navigator.clipboard.writeText('EUnDiHtP5xoqLzLP5rfrd18Yhdv1oUeCPxaeia4ipump')}
