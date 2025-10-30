@@ -8,7 +8,8 @@ import {
   MessageCircle,
   Mail,
   ExternalLink,
-  Heart
+  Heart,
+  Send
 } from 'lucide-react'
 import Logo from './Logo'
 
@@ -47,14 +48,14 @@ export default function Footer() {
       name: 'Twitter'
     },
     { 
+      icon: <Send className="w-5 h-5" />, 
+      href: 'https://t.me/A2ax402Bot',
+      name: 'Telegram'
+    },
+    { 
       icon: <Mail className="w-5 h-5" />, 
       href: 'mailto:a2ax402xyz@gmail.com',
       name: 'Email'
-    },
-    { 
-      icon: <ExternalLink className="w-5 h-5" />, 
-      href: '#demo',
-      name: 'Live Demo'
     },
     { 
       icon: <Zap className="w-5 h-5" />, 
